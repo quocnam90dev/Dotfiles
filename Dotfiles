@@ -1,4 +1,6 @@
 .vimrc
 .zshrc
 .zlogin
-.tmux.conf
+.aliases
+.gitconfig
+.p10k.zsh

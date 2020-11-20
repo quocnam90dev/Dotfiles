@@ -1,0 +1,68 @@
+[user]
+	name = BeastLion
+	email = quocnam90developer@gmail.com
+  signingkey =
+[alias]
+  stt = status
+  b = branch
+  a = add .
+  c = commit -m
+  fo= fetch origin
+  po = pull origin
+  puo = push origin
+  co = checkout
+  cob = checkout -b
+  cma = commit --amend
+  lg = log --pretty=oneline --abbrev-commit --graph --decorate
+  permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+[core]
+	hooksPath = /Users/beastlion/.git-support/hooks
+	excludesfile = /Users/beastlion/.gitignore
+	editor = subl -n -w
+  quotepath = false
+	autocrlf = input
+[apply]
+	whitespace = nowarn
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[github]
+	user =
+#	token =
+[push]
+	default = simple
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[credential]
+	helper = osxkeychain
+[gitseekret]
+	version = 1
+	rulespath = /Users/beastlion/.git-support/seekret-rules
+	rulesenabled = aws.secret_access_key,aws.access_key_id,aws.account_id,mandrill.username,mandrill.password,mandrill.api_key,newrelic.license_key,slack.api_token
+	exceptionsfile = ""
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[commit]
+	gpgsign = false
