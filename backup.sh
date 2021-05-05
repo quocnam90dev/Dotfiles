@@ -8,5 +8,5 @@ done < Dotfiles
 echo "Backup files done, please commit!"
 
 git add . -A
-git commit -m "Backup at $(date)"
+git commit -m "Working day: at $(date)"
 git push origin scs_dotfiles

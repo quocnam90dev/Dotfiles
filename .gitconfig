@@ -6,7 +6,7 @@
   stt = status
   b = branch
   a = add .
-  c = commit -m
+  cm = commit -m
   fo= fetch origin
   po = pull origin
   puo = push origin

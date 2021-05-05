@@ -13,6 +13,7 @@ set autowrite
 set autoindent
 set si "smart indent
 set ruler
+set hlsearch
 
 " turn off backup, swap...
 set nobackup
